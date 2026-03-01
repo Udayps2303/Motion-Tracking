@@ -30,7 +30,7 @@ while cap.isOpened():
     
     if results.hand_landmarks:
         for hand_landmarks in results.hand_landmarks:
-            index_tip = hand_landmarks[4]
+            index_tip = hand_landmarks[8]
             x,y = int(index_tip.x * w), int(index_tip.y * h)
             cv2.circle(frame, (x,y), 10, (255,0,255), -1)
     
