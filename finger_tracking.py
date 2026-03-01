@@ -33,13 +33,15 @@ while cap.isOpened():
             
             # Put inside [] what to track,
             # Indexing from bottom to top of fingers are as follows:
-            # Thumb: 1 , 2 , 3 , 4
-            # Index: 5 , 6 , 7 , 8
+            # Wrist:  0
+            # Thumb:  1 ,  2 ,  3 ,  4
+            # Index:  5 ,  6 ,  7 ,  8
             # Middle: 9 , 10 , 11 , 12
-            # Ring: 13 , 14 , 15 , 16
+            # Ring:  13 , 14 , 15 , 16
             # Pinky: 17 , 18 , 19 , 20
             
-            index_tip = hand_landmarks[8] # Tracking the tip of the index finger
+            index_tip = hand_landmarks[8] # Tracking the tip of the index finger  
+             
             x,y = int(index_tip.x * w), int(index_tip.y * h)
             cv2.circle(frame, (x,y), 10, (255,0,255), -1)
     
